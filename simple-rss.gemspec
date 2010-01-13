@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name = "simple-rss"
+  s.name = "aqab-simple-rss"
   s.version = "1.2.4"
   s.date = "2010-01-13"
   s.summary = "A simple, flexible, extensible, and liberal RSS and Atom reader for Ruby. It is designed to be backwards compatible with the standard RSS parser, but will never do RSS generation."
