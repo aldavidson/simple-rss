@@ -74,8 +74,8 @@ class SimpleRSS
     feed_content = m[1] if  m = %r{(.*?)<(rss:|atom:)?(item|entry).*?>.*?</(rss:|atom:)?(item|entry)>}mi.match(@source)
 
     @@feed_tags.each do |tag|
-      m = (feed_content && ( %r{<(rss:|atom:)?#{tag}(.*?)>(.*?)</(rss:|atom:)?#{tag}>}mi.match(feed_content) ||
-                             %r{<(rss:|atom:)?#{tag}(.*?)\/\s*>}mi.match(feed_content) )) ||
+      m = %r{<(rss:|atom:)?#{tag}(.*?)>(.*?)</(rss:|atom:)?#{tag}>}mi.match(feed_content) ||
+          %r{<(rss:|atom:)?#{tag}(.*?)\/\s*>}mi.match(feed_content)  ||
           %r{<(rss:|atom:)?#{tag}(.*?)>(.*?)</(rss:|atom:)?#{tag}>}mi.match(@source) ||
           %r{<(rss:|atom:)?#{tag}(.*?)\/\s*>}mi.match(@source)
 

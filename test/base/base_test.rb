@@ -1,7 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 class BaseTest < Test::Unit::TestCase
-  def initialize(*args)
-    super
+  def setup
     @rss09 = SimpleRSS.parse open(File.dirname(__FILE__) + '/../data/rss09.rdf')
     @rss20 = SimpleRSS.parse open(File.dirname(__FILE__) + '/../data/rss20.xml')
     @atom = SimpleRSS.parse open(File.dirname(__FILE__) + '/../data/atom.xml')
