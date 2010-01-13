@@ -2,6 +2,10 @@
 
 Simple RSS is a simple, flexible, extensible, and liberal RSS and Atom reader for Ruby. It is designed to be backwards compatible with the standard RSS parser, but will never do RSS generation.
 
+== Fork
+
+This fork removes all usage of the pre-defined variables $1,$2, et cetera and replaces them with RegExp objects. Removes the tabs and indents with spaces. Speeded up the tests by replacing the setup methode with initialize. I also refactored if/else clauses without body.
+
 == Download
 
 * gem install simple-rss
@@ -36,6 +40,8 @@ The parser does not care about the correctness of the XML as it does not use an 
 
 == Authors
 * Lucas Carlson  (mailto:lucas@rufy.com)
+* Blogpost fix by Al Davidson (apdavidson@gmail.com)
+* Refactoring by Aqab Bin Talal (abintalal@gmail.com)
 
 Inspired by Blagg (http://www.raelity.org/lang/perl/blagg) from Rael Dornfest.
 
